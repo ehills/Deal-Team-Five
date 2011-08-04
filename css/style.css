@@ -1,0 +1,80 @@
+@charset "UTF-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #f3f3f2;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/*a img { 
+	border: none;
+}
+
+
+a:link {
+	color: #42413C;
+	text-decoration: underline; 
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { 
+	text-decoration: none;
+}
+*/
+
+#mainContainer {
+	position:relative;
+	width: 982px;
+	background: #FFF;
+	margin: 0 auto; 
+	padding-top:1%;
+	overflow: hidden; 
+	background-color: transparent;
+}
+
+#content {
+
+	padding: 10px 0;
+	width: 960px;
+	
+}
+
+#footerContainer{
+	position:relative;
+	margin:0 auto;
+	bottom:153px;
+	left:200px;
+}
+.textInput{
+	font-size:18px;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	border-radius: 9px;
+	outline:none;
+	padding-left:5px;
+	border:none;
+	width:426px;
+	height:25px;
+
+}
+.button{
+	border: none;
+    position:absolute;
+	left:440px;
+	top:.2px;
+}
+	
+#socialButtonHolder{
+	position:absolute;
+	left:249px;
+	top:87px;
+}
+
+.twitter {
+	position:relative;
+	bottom:33px;
+	left:42px;
+}
