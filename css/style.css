@@ -13,14 +13,13 @@ body {
 	background-image: url('../images/main-image.png');
 	background-repeat: no-repeat;
 	margin: 0 auto; 
-	padding-top:1%;
 	overflow: hidden; 
 	background-color: transparent;
 }
 
 input[type=text] {
 	position: absolute;
-	bottom: 128px;
+	bottom: 117px;
 	left: 200px;
 	font-size:18px;
 	-moz-border-radius: 9px;
@@ -35,7 +34,7 @@ input[type=text] {
 
 input[type=submit] {
 	position: absolute;
-	bottom: 127px;
+	bottom: 116px;
 	right: 200px;
 	width:140px;
 	height: 28px;
