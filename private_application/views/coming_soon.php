@@ -11,9 +11,9 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	<body>
 		<div id="mainContainer">
 			
-			<form id="form" action="" method="post" name="form" >
+			<form id="form" action="/DealTeam5/index.php?/welcome/subscribe" method="post" name="form" >
 				<input type="text" name="email" id="email" />
-				<input type="submit" class="button" value="Submit" />
+				<input type="submit" value="Submit" />
 			</form>
 			
 			<div id="socialButtonHolder">
