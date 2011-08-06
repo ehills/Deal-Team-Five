@@ -7,11 +7,14 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>DealTeam5.co.nz - Ask for a deal. We also stock Electronics, Computers, Games, Daily Deals, Music, Movies, Toys &amp; Collectibles and much more...</title>
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="scripts/jquery-1.6.2.min.js"></script>
+		<script type="text/javascript" src="scripts/jquery.validate.js"></script>
+		<script type="text/javascript" src="scripts/validate_subscription.js"></script>
 	</head>
 	<body>
 		<div id="mainContainer">
 			
-			<form id="form" action="/DealTeam5/index.php?/welcome/subscribe" method="post" name="form" >
+			<form action="/Dealteam5/index.php?/welcome/subscribe" method="post" name="subscribeForm" id="subscribeForm">
 				<input type="text" name="email" id="email" />
 				<input type="submit" value="Submit" />
 			</form>
