@@ -13,12 +13,19 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 	</head>
 	<body>
 		<div id="mainContainer">
-			
+			<?php if ($error != 'no_ajax_complete') { ?>
 			<form action="/Dealteam5/index.php?/welcome/subscribe" method="post" name="subscribeForm" id="subscribeForm">
+				<?php if ($error == 'email') { 
+				echo "<p class = 'error'>Sorry this email is not valid.</p>";
+				} elseif($error == 'duplicate_email') {
+				echo "<p class = 'error'>Sorry this email has already been entered.</p>";
+				}?>
 				<input type="text" name="email" id="email" />
 				<input type="submit" value="Submit" />
 			</form>
-			
+	<?php } else {
+				echo $this -> load -> view('includes/subscribe_complete');
+		  } ?>	
 			<div id="socialButtonHolder">
 				<a href="#"><img src="images/facebook-button.png" alt="Like us on Facebook" width="34" height="33"/></a>
 				<a href="#"><img src="images/twitter-button.png" alt="Follow us on Twitter" width="34" height="33"/></a>

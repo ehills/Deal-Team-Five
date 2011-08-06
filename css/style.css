@@ -61,12 +61,14 @@ input[type=submit] {
 }
 
 #load {
-	position: absolute:
-	bottom: 117px;
-	left: 200px;
-	border: 2px solid black;
-	width: 200px;
-	height: 200px;
+	display: none;
+	position: absolute;
+	bottom: 107px;
+	left: 198px;
+	width: 600px;
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	color: white;
+	font-weight: bold;
 }
 
 .error {

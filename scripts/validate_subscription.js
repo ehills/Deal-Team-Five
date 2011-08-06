@@ -39,6 +39,6 @@ $(document).ready(function() {
 				required: "Please enter an email address."
 			}
 		},
-		//submitHandler: formSubmit
+		submitHandler: formSubmit
 	});
 });

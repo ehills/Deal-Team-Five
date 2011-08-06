@@ -4,18 +4,34 @@
 class Welcome extends CI_Controller {
 
 	public function index() {
-		$this -> load -> view('coming_soon');
+		$data['error'] = 'noError';
+		$this -> load -> view('coming_soon', $data);
+	}
+
+	function badEmail() {
+		$data['error'] = 'email';
+		$this -> load -> view('coming_soon', $data);
+	}
+	
+	function duplicateEmail() {
+		$data['error'] = 'duplicate_email';
+		$this -> load -> view('coming_soon', $data);
+	}
+	
+	function subscribeNoAjaxComplete() {
+		$data['error'] = 'no_ajax_complete';
+		$this -> load -> view('coming_soon', $data);
 	}
 
 	function subscribe() {
-		$this->load->database();
+		$this -> load -> database();
 		$this -> load -> helper('email');
-		
+
 		$email = htmlentities($this -> input -> post('email'));
 		$is_ajax = $this -> input -> post('ajax');
-		
-		if (!valid_email($email)) {
-			
+
+		if(!valid_email($email)) {
+			$this -> badEmail();
 		} else {
 			$sql = "SELECT email FROM subscribed_users
 					WHERE email = ?";
@@ -23,24 +39,18 @@ class Welcome extends CI_Controller {
 			$this -> db -> query($sql, array($email));
 
 			if(mysql_affected_rows() == 1) {
-				if($is_ajax) {
-
-				} else {
-
-				}
-
+					$this -> duplicateEmail();
 			} else {
 				$sql = "INSERT INTO subscribed_users(email)
 					VALUES(?)";
 
-				$this -> db -> query($sql, array($email));
+				$this -> db -> query($sql, $email);
 
 				if(mysql_affected_rows() == 1) {
-					//include ("private_application/views/includes/subscribe_email.php");
 					if($is_ajax) {
-
+						echo $this -> load -> view('includes/subscribe_complete');
 					} else {
-
+						$this -> subscribeNoAjaxComplete();
 					}
 				}
 			}
